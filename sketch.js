@@ -4,7 +4,7 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 var paper;
 var ground;
-var bin,wall;
+var bin,wall,wall2;
 function setup() {
  createCanvas(1280,685);
  engine = Engine.create();
@@ -12,7 +12,8 @@ function setup() {
  ground=new Ground(width/2,height-10,width,20);
  paper= new Paper(200,200,70);
  bin=new Bin(870,670,200,200);
- wall=new Wall(995,422.5,100,685)
+ wall=new Wall(995,422.5,100,685);
+ wall2=new Wall(795,670,50,200);
 }
 function draw() {
  rectMode(CENTER);
@@ -21,7 +22,7 @@ function draw() {
  ground.display();
  paper.display();
  bin.display();
- //wall.display();
+ //wall2.display();
  drawSprites();
 }
 function keyPressed(){
