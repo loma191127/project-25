@@ -1,4 +1,3 @@
-
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
@@ -11,9 +10,9 @@ function setup() {
  engine = Engine.create();
  world = engine.world;
  ground=new Ground(width/2,height-10,width,20);
- paper= new Paper(200,200,40);
- bin=new Bin(840,605,200,200);
- wall=new Wall(985,422.5,100,685)
+ paper= new Paper(200,200,70);
+ bin=new Bin(870,670,200,200);
+ wall=new Wall(995,422.5,100,685)
 }
 function draw() {
  rectMode(CENTER);
@@ -22,10 +21,10 @@ function draw() {
  ground.display();
  paper.display();
  bin.display();
- wall.display();
+ //wall.display();
  drawSprites();
 }
 function keyPressed(){
     if (keyCode === UP_ARROW) {
- Matter.Body.applyForce(paper.body,paper.body.position,{x:75,y:-75});}
+ Matter.Body.applyForce(paper.body,paper.body.position,{x:200,y:-260});}
 }
